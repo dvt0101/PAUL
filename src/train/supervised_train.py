@@ -93,7 +93,7 @@ def main():
                       'from checkpoints.')
 
     # Data loading code
-    data = dataset.__dict__[args.data](root=args.data_dir, part='train', size=(args.height, args.width),
+    data = dataset.__dict__[args.data](root=args.data, part='train', size=(args.height, args.width),
                                        require_path=True, true_pair=True)
     train_loader = torch.utils.data.DataLoader(
         data,
